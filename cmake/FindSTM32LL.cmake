@@ -58,8 +58,8 @@ ELSEIF(STM32_FAMILY STREQUAL "L0")
     SET(LL_PREFIX stm32l0xx_)
 
 ELSEIF(STM32_FAMILY STREQUAL "L4")
-    SET(LL_COMPONENTS	adc bus comp cortex crc crs dac dma2d dmamux dma exti 
-						gpio i2c iwdg lptim lpuart opamp pwr rcc rng rtc spi 
+    SET(LL_COMPONENTS	adc bus comp cortex crc crs dac dma2d dmamux dma exti fmc 
+						gpio i2c iwdg lptim lpuart opamp pwr rcc rng rtc sdmmc spi 
 						system tim usart usb utils wwdg)
 
     SET(LL_REQUIRED_COMPONENTS bus cortex pwr rcc system utils)

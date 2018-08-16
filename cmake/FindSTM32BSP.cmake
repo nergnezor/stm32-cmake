@@ -30,6 +30,22 @@ IF(STM32_FAMILY STREQUAL "F4")
 			      ts3510
 			      wm8994
 			      )
+ELSEIF(STM32_FAMILY STREQUAL "L4")
+	IF(STM_BOARD STREQUAL "STM32L4R9I-Discovery")
+		SET(BSP_COMPONENTS eeprom
+			    gyroscope
+			    io
+			    lcd
+			    sdram
+			    ts)
+		SET(BSP_PREFIX stm32l4r9i_discovery_)
+		SET(BSP_HEADERS stm32l4r9i_discovery.h)
+		SET(BSP_SRC stm32l4r9i_discovery.c)
+	ENDIF()
+	set(COMMON_COMPONENTS 
+		ft3x67
+	    mfxstm32l152
+	)
 ENDIF()
 
 IF(NOT STM32BSP_FIND_COMPONENTS)
